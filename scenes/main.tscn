@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/API/GameManager.gd" id="1_ykxkm"]
 [ext_resource type="Script" path="res://scripts/API/API_Settings.gd" id="2_42tb1"]
-[ext_resource type="Script" path="res://scripts/testtjogmy.gd" id="3_1157w"]
+[ext_resource type="Script" path="res://scripts/temp_ui.gd" id="3_1157w"]
 
 [node name="Main" type="Node2D"]
 
