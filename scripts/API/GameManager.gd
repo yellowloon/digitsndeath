@@ -18,7 +18,7 @@ func generate_response(_input):
 func dialouge_request(player_dialouge):
 	messages.append({
 		"role": "user",
-		"content": player_dialouge
+		"content": player_dialouge,
 		})
 	
 	var body = JSON.new().stringify({
@@ -40,9 +40,10 @@ func _on_request_completed(result, response_code, headers, body):
 	var response = json.get_data()
 	var message = "empty"
 	
-	if response == null:
+	if response.has("choices"):
 		message = response["choices"][0]["message"]["content"]
 	else:
 		message = "NO CONNECTION\n" + str(response)
 	
 	current_message = message
+	print(current_message) # debug log
