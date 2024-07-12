@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://ieefumi7lmn7"]
+
+[ext_resource type="Script" path="res://scripts/API/GameManager.gd" id="1_ykxkm"]
+[ext_resource type="Script" path="res://scripts/API/API_Settings.gd" id="2_42tb1"]
+[ext_resource type="Script" path="res://scripts/testtjogmy.gd" id="3_1157w"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_ykxkm")
+
+[node name="Settings" type="Node" parent="GameManager"]
+script = ExtResource("2_42tb1")
+
+[node name="Button" type="Button" parent="GameManager"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = 231.0
+offset_right = 70.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="GameManager"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -187.0
+offset_right = 177.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Output"
+
+[node name="TextEdit" type="TextEdit" parent="GameManager"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -363.0
+offset_top = 53.0
+offset_right = 325.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+placeholder_text = "Cockholder"
+script = ExtResource("3_1157w")
+
+[connection signal="pressed" from="GameManager/Button" to="GameManager/TextEdit" method="dostuff"]
